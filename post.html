@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/blog.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Karma&family=Lora:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Poppins:ital,wght@0,400;0,500;0,700;1,300&family=Raleway:ital,wght@0,600;1,700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+
+    <title>Quyet Blog</title>
+    <!--ShareThis-->
+    <script type='text/javascript'
+        src='https://platform-api.sharethis.com/js/sharethis.js#property=65178eb252401a0012c02659&product=inline-share-buttons'
+        async='async'></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-wrapper">
+            <nav>
+                <a class="logo" href="index.html"><img src="Images/LOGO_small.svg" alt=""></a>
+
+                <div class="blog-name">
+                    <h4>Quyet's writing</h4>
+                </div>
+                <div class="sub-btn"><a href="#subscribe">Subscribe</a></div>
+            </nav>
+        </div>
+    </header>
+
+
+    <!--end of header-->
+
+<!--START WRITING FROM HERE-->
+    <div class="wrapper">
+        <div class="body-section">
+            <h2 class="post-heading">How writing for yourself can change your life.</h2>
+            <p class="sub-heading">The power of writing when it comes to self-discovery, embracing and being our true
+                selves.</p>
+            <div class="inform-frame">
+                <div class="inform-content">
+                    <img class="avatar" src="Images/about-me-img.png" alt="">
+                    <div class="inform-content-left">
+                        <h4>Tran trong quyet</h4>
+                        <p class="date-post">Sep 12, 2023</p>
+                    </div>
+                </div>
+            </div>
+            <!--START WRITING FROM HERE-->
+            <p class="main-para">
+                <b>Write for ourselves unlock the power of honesty</b>
+                <br><br>
+                When we write for ourselves voluntary, we have nothing to hide, nothing to be approved. Therefor we can
+                be completely honest with our own felling, be vulnerable, embrace ours own darkness, etc. When we do the
+                things to prove that we are honest consciously, and we want to change, we are actually teaching our
+                subconscious minds that we are embrace ourselves and we want to be the real self.
+                <br><br>
+                As soon as your subconscious mind get the direction, it will tell you exactly what to do to be your true
+                self or get what you want, that is most powerful, most appropriate for you, and just for you because
+                only you know your self the most. And if you continuously give it the right signal "by focus on the
+                positive, the goodness, and embrace your self” your mind will tell you what to do and your highest self
+                will shape your life. If you do right what your subconscious does is make the you at the present and the
+                real-you become one. There for there is no conflict in the mind.
+                <br><br>
+                <b>How did I discover this</b>
+                <br>
+                <br>
+                Because I looked back to my own story. At the beginning of 2021, as a teenager living in the ages of
+                constant distraction, instant gratification, I ruined my life in many ways (social media, videogame,
+                living a fake life digitally with all kind of addiction). Back in my mind I was always knowing that I
+                had something to change, something more right to do, but my monkey mind was always looking for nonsense
+                pleasure and kept me away from doing the thing I wanted to do. My mind was in very conflict at that time
+                and the more I had to say excuse to my self or to other the more I hated it.
+                <br><br>
+                I started to change the direction of the mind, this was a very natural process that was basically follow
+                my intuition that told me that “let write your thought down, write your thought down”. Then I got the
+                journal that my sister had given me 7 years ago and I’d never used it before. I started to journal and
+                now I look back, my life started changing from there.
+                <br><br>
+                <b>Conclusion</b>
+                <br><br>
+                Honesty is the source of all goodness. As soon as we can feel our true self, we don’t need to pretend to
+                be good, all we need to do is to be ourselves, that is good for everything and everyone. That is true
+                goodness.
+                Stop lying to others and stop lying to ourselves. If you think that you have to lie to be good, that is
+                not true goodness.
+            </p>
+
+
+            <!--End of writing-->
+
+
+        </div>
+        <div class="share-btn-container">
+            <!-- ShareThis BEGIN -->
+            <div class="sharethis-inline-share-buttons"></div>
+            <!-- ShareThis END -->
+        </div>
+           
+        <a class="all-post-btn" href="blog.html">Đọc bài viết khác</a>
+        <!--subscribe section-->
+        <div id="subscribe" class="subscribe-section">
+            <h2 class="head">Đăng ký nhận bài viết hàng tuần </h2>
+            <div class="form-frame">
+                <form name="submit-to-google-sheet">
+                    <input type="email" name="Email" placeholder="Địa chỉ Email" required>
+                    <button type="submit">Đăng ký</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="wrapper footer">
+            <div class="footer-sec">
+                <a href="#">Về Trang Chính</a>
+                <a class="donate-btn" href="index.html">donate</a>
+            </div>
+            
+        </div>
+    </footer>
+    <p class="cpr">TranQuyet © 2023, All right reserved</p>
+
+
+    
+    <!--email subscribe form-----------js-->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw7FZ81GqLFUmBpmso71uAzkcWvhMYRUnKcN0CAFTxFIlBi0TqPFk9FvV42ECfItxKz/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Đã đăng ký!"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 4000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+
+</html>

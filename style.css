@@ -1,0 +1,649 @@
+:root {
+    --black-color: #171717;
+    --green-color: #CCF656;
+    --orange-color: #FF5A4B;
+    --white-color: #ffffff;
+    --yellow-color: #FFF200;
+
+
+    --transition: all 300ms ease;
+}
+
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    text-decoration: none;
+    text-align: left;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.btn {
+    font-size: 1.125rem;
+    border-radius: 60px;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.btn :hover {
+    cursor: pointer;
+    box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.25);
+}
+
+.wrapper {
+    max-width: 1134px;
+    margin: 0 auto;
+}
+
+header {
+    /*background-color: var(--black-color);
+    width: 100%;
+    height: 85vh;*/
+
+    background-image: url(Images/background-1.jpg);
+    position: relative;
+    width:100;
+    height: 85vh;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 0;
+}
+
+header::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0 , 0, 0.55);
+    z-index: 1;
+}
+
+/*-----------------------Nav bar-----------------------------*/
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    top: 0;
+    padding: 2.8rem 0;
+    z-index: 100;
+    margin: 0 auto;
+    z-index: 70;
+}
+
+nav div {
+    width: 8.6rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 60;
+}
+
+nav button {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5rem;
+    z-index: 60;
+}
+
+nav ul li a {
+    color: var(--white-color);
+    font-family: Roboto, sans-serif;
+    font-size: 0.938rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: var(--transition);
+    z-index: 60;
+}
+
+nav ul li a:hover {
+    color: var(--orange-color);
+}
+
+.btn-download {
+    background-color: none;
+    padding: 0.625rem 2rem;
+    border-radius: 100px;
+    border: 2px solid var(--green-color);
+    color: var(--white-color);
+    font-family: Roboto, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    transition: var(--transition);
+    z-index: 60;
+}
+
+.btn-download:hover {
+    color: var(--black-color);
+    background-color: var(--green-color);
+}
+
+nav ul li a.active {
+    color: #FF5A4B;
+}
+
+/* ==================END OF NAV BAR=========*/
+
+/* ==================hero section=========*/
+
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10rem 0;
+    
+}
+
+.text-content h3 {
+    margin-bottom: 2rem;
+    color: var(--white-color);
+    font-family: Raleway, sans-serif;
+    font-size: 3.4rem;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.155rem;
+    text-transform: capitalize;
+    font-style: italic;
+    z-index: 60;
+}
+
+.introduction h1 {
+    margin-bottom: 1rem;
+    color: var(--white-color);
+    font-family: Roboto, sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    z-index: 60;
+}
+
+.introduction p {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.70);
+    font-family: Poppins, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    z-index: 60;
+}
+
+.btn-icon {
+    display: flex;
+    justify-content: center;
+    color: var(--black-color);
+    padding: 8px 30px 8px 12px;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 10px;
+    background: var(--green-color);
+    font-family: Roboto, sans-serif;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: var(--transition);
+    z-index: 60;
+}
+
+.btn-icon:hover {
+    background-color: var(--orange-color);
+}
+
+.btn-icon:active {
+    transform: scale(0.9);
+}
+
+.icon-desktop-down {
+    width: 37px;
+    height: 37px;
+}
+
+.btn-icon p {
+    color: var(--black-color);
+    font-family: Roboto, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.introduction {
+    margin-bottom: 3.438rem;
+    z-index: 60;
+}
+
+section {
+    margin-top: 6.25rem;
+}
+
+
+/*==============================my work section=============================*/
+.cards {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 2.875rem;
+    row-gap: 2.875rem;
+}
+
+.card-1 {
+    display: inline-flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    background: #0C1F00;
+    border-radius: 0.86rem;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.card-1:hover {
+    transform: translate(0, -.5rem);
+}
+
+
+.text-inform {
+    margin: 1.2rem 2.2rem;
+}
+
+.text-inform h4 {
+    color: var(--white-color);
+    font-family: Roboto, sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-bottom: .4rem;
+}
+
+.text-inform p {
+    color: var(--white-color);
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom: 1.3rem;
+    text-align: left;
+}
+
+.text-inform .btn {
+    color: black;
+    padding: 0.625rem 2.625rem;
+    background-color: var(--green-color);
+    font-family: Roboto, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: var(--transition);
+    cursor: pointer;
+    opacity: 1;
+}
+
+.text-inform .btn:hover {
+    transform: scale(0.98);
+}
+
+.portfolio-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio-section h2 {
+    width: 70%;
+    text-align: center;
+    color: #000;
+    text-align: center;
+    font-family: Poppins, sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-bottom: 3.5rem;
+}
+
+/* quote section */
+
+.quote-section {
+    background-color: var(--yellow-color);
+
+}
+
+.quote-content {
+    padding-top: 6rem;
+}
+
+.quote-text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 6rem;
+
+}
+
+.quote-content h3 {
+    color: #171123;
+    font-family: Poppins, sans-serif;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.quote-content h4 {
+    color: var(--black-color);
+    font-family: Raleway, sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+
+/* about section */
+
+.about-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+    background-color: var(--black-color);
+    padding: 8rem;
+    margin-top: 0;
+}
+
+.about-content {
+    align-items: center;
+    background-color: var(--white-color);
+    border-radius: .75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 4rem 5rem;
+}
+
+.about-section h4 {
+    color: var(--black-color);
+    font-family: Roboto, sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-bottom: 0rem;
+}
+
+.text-content-aboutme p:first-child {
+    color: black;
+    font-family: Poppins, sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.text-content-aboutme p:last-child {
+    color: black;
+    font-family: Poppins, sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: none;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.btn-about {
+    display: inline-flex;
+    padding: .75rem 2rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 70px;
+    background: var(--green-color);
+    color: #000;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.aboutme-right .btn-about:hover {
+    background-color: var(--orange-color);
+    color: var(--white-color);
+
+}
+
+.aboutme-right .btn-about:active {
+    transform: scale(0.92);
+}
+
+/*         contact section         */
+
+
+
+/*footer section*/
+
+footer {
+    background-color: var(--black-color);
+}
+
+.footer-section {
+    padding-bottom: 2.5rem;
+}
+
+.column-container a {
+    width: fit-content;
+    height: fit-content;
+}
+
+.column-container {
+    display: grid;
+    grid-template-columns: 4fr 2fr 2fr 2fr;
+    padding: 4.5rem 0 3.2rem;
+}
+
+.link h4 {
+    color: var(--green-color);
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    letter-spacing: 1.92px;
+    text-transform: uppercase;
+    margin-bottom: 1.65rem;
+}
+
+.link ul li a {
+    color: var(--white-color);
+    font-family: Poppins, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    transition: var(--transition);
+}
+
+.link ul li a:hover {
+    color: var(--orange-color);
+}
+
+.link ul li {
+    margin-bottom: .75rem;
+}
+
+
+
+.social {
+    display: flex;
+    flex-direction: column;
+    gap: 1.24rem;
+    flex-shrink: 0;
+}
+
+.social a {
+    background-color: #462825;
+    width: fit-content;
+}
+
+.social a {
+    transition: var(--transition);
+}
+
+.social a:hover {
+    background-color: #CCF656;
+    color: var(--orange-color);
+}
+
+.copyright {
+    color: var(--white-color);
+    opacity: .4;
+    font-family: Poppins, sans-serif;
+    font-size: .9rem;
+    font-weight: 250;
+    text-transform: capitalize;
+    margin-top: 1.5rem;
+    margin-bottom: 0rem;
+    text-align: left;
+}
+
+
+/*===========Subscribe section*/
+.subscribesection {
+    margin-bottom: 6rem;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 55%;
+}
+
+.subscribe-text-content h1,
+p {
+    text-align: center;
+}
+
+.subscribe-text-content h1 {
+    color: #FF7F11;
+    font-family: Poppins, sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 5.04px;
+    text-transform: uppercase;
+}
+
+.subscribe-text-content p {
+    color: var(--black-color);
+    font-family: Adobe Caslon Pro, serif;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+form textarea {
+    display: block;
+    width: 100%;
+    color: rgba(0, 0, 0, 0.48);
+    margin-bottom: .5rem;
+    padding: 1rem;
+    border: 2px solid rgba(0, 0, 0, 0.48);
+    border-radius: 6px;
+    transition: var(--transition);
+}
+
+form input:focus,
+form textarea:focus {
+    border: 2px solid var(--orange-color);
+    color: black;
+}
+
+form button {
+    margin: 0rem auto 0;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    padding: .75rem;
+    color: var(--white-color);
+    background: var(--orange-color);
+    font-family: Roboto, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    transition: var(--transition);
+    text-transform: capitalize;
+    cursor: pointer;
+    text-align: center;
+}
+
+form button:hover {
+    background-color: var(--green-color);
+    color: var(--black-color);
+}
+
+form button:active {
+    transform: scale(0.95);
+}
+
+.form-section span {
+    font-family: Roboto, sans-serif;
+    font-size: 1.1rem;
+    color: var(--black-color);
+    margin-top: 0.8rem;
+
+}
+
+
+
+
+
+/*==================================MEDIA QUERIES (PHONE VERSION)========================*/
+
+
+@media (max-width: 700px) {
+.wrapper {
+    padding: 0 30px ;
+}
+}
